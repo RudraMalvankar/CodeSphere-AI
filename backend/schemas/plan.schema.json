@@ -1,0 +1,23 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "goal": { "type": "string" },
+    "steps": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "action": { "type": "string", "enum": ["createFile", "updateFile", "updatePackageJson", "runCommand"] },
+          "path": { "type": "string" },
+          "contents": { "type": "string" },
+          "command": { "type": "string" }
+        },
+        "required": ["action"],
+        "additionalProperties": true
+      }
+    }
+  },
+  "required": ["goal", "steps"],
+  "additionalProperties": false
+}

@@ -1,0 +1,7 @@
+HOw to run this project
+
+npm init - y
+
+
+ npm i express mongoose jsonwebtoken bcrypt cookie-praser dotenv cors
+npm install nodemon@latest
