@@ -12,7 +12,10 @@ import agenticExecutorRoutes from "./routes/agentic-executor.routes.js"
 connect();
 
 const app = express();
-app.use(cors());
+app.use(cors({
+    origin: 'https://code-sphere-ai.vercel.app', // change to your actual frontend URL
+    credentials: true,
+}));
 app.use(morgan('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended:true}));
